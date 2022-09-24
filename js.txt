@@ -1,0 +1,167 @@
+//    function timedRefresh(timeoutPeriod) {
+//    setTimeout("location.reload(true);",timeoutPeriod);
+// }
+// window.onload = timedRefresh(3000);
+
+function Temperature() {
+    var x = Math.floor(Math.random()*101);
+    document.getElementById("text1").innerHTML=x;
+    if( x >=0 && x <= 20) {
+       document.getElementById("box1").style.background = 'rgb(246, 63, 63)'; 
+    
+    }
+    else if( x > 20 && x<=50) {
+        document.getElementById("box1").style.background = 'rgb(226, 28, 28)';
+    }
+    else{
+       document.getElementById("box1").style.background = 'rgb(181, 1, 1)';
+    }
+}
+Temperature();
+
+function Humidity() {
+var y = Math.floor(Math.random()*101);
+document.getElementById("text2").innerHTML=y;
+if( y >=0 && y <= 20) {
+   document.getElementById("box2").style.background = 'rgb(100, 80, 248)'; 
+
+}
+else if( y > 20 && y<=50) {
+    document.getElementById("box2").style.background = 'rgb(53, 33, 205)';
+}
+else{
+   document.getElementById("box2").style.background = 'rgb(22, 2, 171)';
+}
+}
+Humidity();
+
+function Thelight() {
+var z = Math.floor(Math.random()*101);
+    document.getElementById("text3").innerHTML=z;
+    if( z >=0 && z <= 20) {
+       document.getElementById("box3").style.background = 'rgb(248, 242, 83)'; 
+    
+    }
+    else if( z > 20 && z<=50) {
+        document.getElementById("box3").style.background = 'rgb(219, 213, 41)';
+    }
+    else{
+       document.getElementById("box3").style.background = 'rgb(200, 193, 6)';
+}
+}
+Thelight();
+
+
+function abc(){
+document.getElementById('off11').style.backgroundColor=' red'
+}
+
+function abcd(){
+document.getElementById('off11').style.backgroundColor='yellow'
+}
+
+function abc(){
+let text = "Bạn có muốn bật đèn k?";
+if (confirm(text) == true) {
+   document.getElementById('switch').style.backgroundColor='green'
+ } 
+}
+
+function abcd(){
+let text = "Bạn có muốn tắt đèn k?";
+if (confirm(text) == true) {
+document.getElementById('switch1').style.backgroundColor='red '
+}
+}
+function abcde(){
+let result=" Bạn có muốn bật đèn k?";
+if (confirm(text) == true) {
+   document.getElementById('switch2').style.backgroundColor='red '
+
+}
+}  
+
+function on() {
+document.getElementById("myImage").src= "bongdensang.jpg"
+}
+function off() {
+document.getElementById("myImage").src= "bongden.jpg"
+}
+
+
+
+Highcharts.chart('container', {
+
+   title: {
+     text: 'U.S Solar Employment Growth by Job Category, 2010-2020'
+   },
+ 
+   subtitle: {
+     text: 'Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>'
+   },
+ 
+   yAxis: {
+     title: {
+       text: 'Number of Employees'
+     }
+   },
+ 
+   xAxis: {
+     accessibility: {
+       rangeDescription: 'Range: 2010 to 2020'
+     }
+   },
+ 
+   legend: {
+     layout: 'vertical',
+     align: 'right',
+     verticalAlign: 'middle'
+   },
+ 
+   plotOptions: {
+     series: {
+       label: {
+         connectorAllowed: false
+       },
+       pointStart: 2010
+     }
+   },
+ 
+   series: [{
+     name: 'Installation & Developers',
+     data: [43934, 48656, 65165, 81827, 112143, 142383,
+       171533, 165174, 155157, 161454, 154610]
+   }, {
+     name: 'Manufacturing',
+     data: [24916, 37941, 29742, 29851, 32490, 30282,
+       38121, 36885, 33726, 34243, 31050]
+   }, {
+     name: 'Sales & Distribution',
+     data: [11744, 30000, 16005, 19771, 20185, 24377,
+       32147, 30912, 29243, 29213, 25663]
+   }, {
+     name: 'Operations & Maintenance',
+     data: [null, null, null, null, null, null, null,
+       null, 11164, 11218, 10077]
+   }, {
+     name: 'Other',
+     data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,
+       17300, 13053, 11906, 10073]
+   }],
+ 
+   responsive: {
+     rules: [{
+       condition: {
+         maxWidth: 500
+       },
+       chartOptions: {
+         legend: {
+           layout: 'horizontal',
+           align: 'center',
+           verticalAlign: 'bottom'
+         }
+       }
+     }]
+   }
+ 
+ });
